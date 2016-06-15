@@ -7,7 +7,7 @@ clear,close all
 BER_inputSNR_result = [];
 for inputSNR = -20:2:50
     temp_BER_inputSNR_result = [];
-    for i=1:1:50
+    for i=1:1:100
             count = BER_inputSNR(inputSNR);
             temp_BER_inputSNR_result = [temp_BER_inputSNR_result;count];
     end
