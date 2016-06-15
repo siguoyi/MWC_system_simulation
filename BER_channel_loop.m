@@ -7,7 +7,8 @@ clear,close all
 BER_channel_result = [];
 for channel_nums = 1:1:50
     temp_BER_channel_result = [];
-    for i=1:1:50
+    for i=1:1:100
+        iterNum = 100*(channel_nums-1)+i
             count = BER_channel(channel_nums);
             temp_BER_channel_result = [temp_BER_channel_result;count];
     end
