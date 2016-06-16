@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear,close all
-channel_nums = 10;
+channel_nums = 50;
 BER_inputSNR_result = [];
 for inputSNR = -20:2:50
     temp_BER_inputSNR_result = [];
@@ -15,4 +15,4 @@ for inputSNR = -20:2:50
     BER_inputSNR_result = [BER_inputSNR_result temp_BER_inputSNR_result];
 end
 
-save BER_inputSNR(10)
+save BER_inputSNR(50)
