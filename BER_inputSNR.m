@@ -1,4 +1,4 @@
-function [ count ] = BER_inputSNR( inputSNR )
+function [ count ] = BER_inputSNR( channel_nums, inputSNR )
 %BER_INPUTSNR Summary of this function goes here
 %   function for describing the relation ship of BER and inputSNR
 %% Signal model
@@ -18,7 +18,7 @@ TimeWin = [0  L*R*K-1 L*R*(K+K0)-1]*TimeResolution; % Time interval in which sig
 Taui = [0.7 0.4 0.3]*max(TimeWin);          % Time offest of the i'th band
 
 %% Sampling parameters
-ChannelNum = 30;                            % Number of channels
+ChannelNum = channel_nums;                            % Number of channels
 L = 195;                                    % Aliasing rate
 M = 195;
 fp = fnyq/L;

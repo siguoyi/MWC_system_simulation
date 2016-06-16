@@ -1,8 +1,8 @@
-function [ count ] = BER_channel( channel_nums )
+function [ count ] = BER_channel( channel_nums, inputSNR)
 %BER_CHANNEL Summary of this function goes here
 %   function for describing the relation ship of BER and channel numbers
 %% Signal model
-SNR = 20;                                   % Input SNR
+SNR = inputSNR;                                   % Input SNR
 N = 8;                                      % Number of bands (when counting  a band and its conjugate version separately)
 B = 50e6;                                   % Maximal width of each band
 Bi = ones(1,N/2)*B;
