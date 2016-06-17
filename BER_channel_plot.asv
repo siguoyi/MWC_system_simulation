@@ -58,10 +58,3 @@ legend('SNR=10dB','SNR=20dB','SNR=30dB');
 % grid on
 xlabel('Channel numbers');
 ylabel('Success Ratio');
-
-% % semilogy(mean_result, '-o','linewidth',2)
-% plot(mean_result, '-o','linewidth',2)
-% % set(gca,'xticklabel',get(gca,'xTick')*5-15);
-% grid on
-% xlabel('Channel numbers');
-% ylabel('BER');
