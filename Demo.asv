@@ -204,40 +204,29 @@ figure(1)
 subplot(211)
 plot(x(1,1:16000))
 title('原始信号');
-set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000*1000);
+set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000);
 set(gca,'YLim',[-2 2]);
-xlabel('时间/ms');
-ylabel('幅度');
 subplot(212)
 tttt=1:16000;
-tttt=tttt/5*1.6*1e7*2;
+tttt=tttt/5*1.6*1e7;
 tttt=tttt-max(tttt)/2;
 y=abs(real(fft(x(1:16000))));
-y1=y(1:8000);
-y2=y(8001:16000);
-yy=[y1,y2];
 % plot(tttt,abs(real(fft(x))));
-plot(tttt,yy);
-% set(gca,'xticklabel',(1./(get(gca,'xTick')*5e-3/16000))./16000./1e9);
-xlabel('频率/GHz');
-ylabel('幅度');
+plot(tttt,y);
+% set(gca,'xticklabel',(1./(get(gca,'xTick')*5e-3/16000))./16000);
 title('原始信号频谱');
 
 figure(2)
 subplot(211)
 plot(x(1,1:16000))
 title('原始信号');
-set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000*1000);
+% set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000);
 set(gca,'YLim',[-2 2]);
-xlabel('时间/ms');
-ylabel('幅度');
 subplot(212)
 plot(x_rec(1,1:16000))
-set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000*1000);
+% set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000);
 title('重构信号');
 set(gca,'YLim',[-2 2]);
-xlabel('时间/ms');
-ylabel('幅度');
 
 % 
 % figure(3)
@@ -282,24 +271,15 @@ ylabel('幅度');
 figure(7)
 subplot(311)
 plot(sss,'linewidth',2)
-set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000*1000);
 set(gca,'YLim',[-1.5 1.5]);
-xlabel('时间/ms');
-ylabel('幅度');
 title('抽样判决波形');
 subplot(312)
 plot(at,'linewidth',2)
-set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000*1000);
 set(gca,'YLim',[-1.5 1.5]);
-xlabel('时间/ms');
-ylabel('幅度');
 title('重构码元波形');
 subplot(313)
 plot(b,'linewidth',2)
-set(gca,'xticklabel',get(gca,'xTick')*5e-3/16000*1000);
 set(gca,'YLim',[-1.5 1.5]);
-xlabel('时间/ms');
-ylabel('幅度');
 title('原始码元波形');
 
 % figure(8)
