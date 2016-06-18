@@ -4,11 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear,close all
-<<<<<<< HEAD
-inputSNR = -10;
-=======
 inputSNR = 0;
->>>>>>> 4775a9994994390dc336a2e61e4eadf746cd06dc
 BER_channel_result = [];
 for channel_nums = 1:1:50
     temp_BER_channel_result = [];
@@ -20,10 +16,5 @@ for channel_nums = 1:1:50
     BER_channel_result = [BER_channel_result temp_BER_channel_result];
 end
 
-<<<<<<< HEAD
-save BER_channel(-10);
-xlswrite('BER_channel(-10).xlsx',BER_channel_result);
-=======
 save BER_channel(0);
 xlswrite('BER_channel(0).xlsx',BER_channel_result);
->>>>>>> 4775a9994994390dc336a2e61e4eadf746cd06dc
