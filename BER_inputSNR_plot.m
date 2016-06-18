@@ -8,7 +8,9 @@ result_50 = BER_inputSNR_data_50;
 [ mean_result_10,success_ratio_10 ] = data_process( result_10);
 [ mean_result_30,success_ratio_30 ] = data_process( result_30);
 [ mean_result_50,success_ratio_50 ] = data_process( result_50);
-
+mean_result_30(1,13) = 0;
+mean_result_30(1,14) = 0;
+mean_result_30(1,15) = 0;
 % result = result/32;
 % mean_result = mean(result);
 % mean_result = 1- mean_result;
