@@ -28,10 +28,11 @@ hold on
 semilogy(mean_result_30, '-r^','linewidth',2);
 hold on
 semilogy(mean_result_50, '-md','linewidth',2);
+set(gca,'xticklabel',(get(gca,'xTick')-1)*2-20);
 legend('channel=10','channel=30','channel=50');
 
 % grid on
-xlabel('inputSNR');
+xlabel('inputSNR/dB');
 ylabel('BER');
 
 figure(2)
@@ -40,10 +41,11 @@ hold on
 plot(mean_result_30, '-r^','linewidth',2)
 hold on
 plot(mean_result_50, '-md','linewidth',2)
+set(gca,'xticklabel',(get(gca,'xTick')-1)*2-20);
 legend('channel=10','channel=30','channel=50');
 
 % grid on
-xlabel('inputSNR');
+xlabel('inputSNR/dB');
 ylabel('BER');
 
 figure(3)
@@ -52,8 +54,9 @@ hold on
 plot(success_ratio_30, '-r^','linewidth',2)
 hold on
 plot(success_ratio_50, '-md','linewidth',2)
+set(gca,'xticklabel',(get(gca,'xTick')-1)*2-20);
 legend('channel=10','channel=30','channel=50');
 
 % grid on
-xlabel('inputSNR');
+xlabel('inputSNR/dB');
 ylabel('Success Ratio');

@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear,close all
-inputSNR = 30;
+inputSNR = 0;
 BER_channel_result = [];
 for channel_nums = 1:1:50
     temp_BER_channel_result = [];
@@ -16,4 +16,5 @@ for channel_nums = 1:1:50
     BER_channel_result = [BER_channel_result temp_BER_channel_result];
 end
 
-save BER_channel(30)
+save BER_channel(0);
+xlswrite('BER_channel(0).xlsx',BER_channel_result);
